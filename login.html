@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/input.css" rel="stylesheet" />
+    <link href="src/output.css" rel="stylesheet" />
+    <!-- SweetAlert2 untuk Pop up -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <section
+      style="
+        background-image: url(&quot;img/logoUt.jpg&quot;);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+      class="login-section w-full h-screen flex items-center justify-center"
+    >
+      <div class="login-box w-100 p-8 bg-white rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold">Selamat Datang</h1>
+        <!-- Form Start -->
+        <form method="post" id="loginForm" class="mt-5">
+          <!-- Input Email -->
+          <div class="flex items-center gap-2 mb-4 border-b">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#000000"
+            >
+              <path
+                d="M168-192q-29.7 0-50.85-21.16Q96-234.32 96-264.04v-432.24Q96-726 117.15-747T168-768h624q29.7 0 50.85 21.16Q864-725.68 864-695.96v432.24Q864-234 842.85-213T792-192H168Zm312-240L168-611v347h624v-347L480-432Zm0-85 312-179H168l312 179Zm-312-94v-85 432-347Z"
+              />
+            </svg>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              class="p-3 w-full focus:outline-none"
+              required
+            />
+          </div>
+          <!-- Input Password -->
+          <div>
+            <div class="flex items-center gap-2 mb-4 border-b">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="20px"
+                fill="#000000"
+              >
+                <path
+                  d="M220-412q-28-28-28-68t28-68q28-28 68-28t68 28q28 28 28 68t-28 68q-28 28-68 28t-68-28Zm68 172q-100 0-170-70T48-480q0-100 70-170t170-70q65 0 120 32.5t88 87.5h344l120 120-180 168-84-60-72 60-96-72h-20q-24 68-85.5 106T288-240Zm0-72q63 0 111-40.5T454-456h98l70 52 71-59 81 58 82-76-46-47H449q-19-53-62.5-86.5T288-648q-70 0-119 49t-49 119q0 70 49 119t119 49Z"
+                />
+              </svg>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                class="p-3 w-full focus:outline-none"
+              />
+            </div>
+            <a
+              href="#"
+              id="forgetPassword"
+              class="text-blue-600 underline text-right block hover:text-blue-950 cursor-pointer"
+              >Lupa Password?</a
+            >
+          </div>
+          <br />
+          <button
+            type="submit"
+            class="p-2 w-full rounded bg-yellow-300 hover:bg-yellow-400 transition-colors font-bold cursor-pointer"
+          >
+            Masuk
+          </button>
+        </form>
+        <!-- Form End  -->
+
+        <a
+          href="#"
+          id="registerLink"
+          class="text-blue-600 underline text-center block mt-4 hover:text-blue-950 cursor-pointer"
+          >Belum punya akun?</a
+        >
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
+  </body>
+</html>

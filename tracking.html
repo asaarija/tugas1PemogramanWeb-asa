@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/input.css" rel="stylesheet" />
+    <link href="src/output.css" rel="stylesheet" />
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SweetAlert2 untuk Pop up -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_drop_down"
+    />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <title>Tracking Pengiriman</title>
+  </head>
+  <body>
+     <!-- Header starts -->
+    <header
+      class="bg-blue-500 w-full h-[10vh] border-b-4 border-yellow-400 flex items-center justify-between p-4 shadow-lg absolute top-0 left-0"
+    >
+      <img src="img/logoUt.jpg" alt="" class="w-17.5" />
+      <nav class="w-full p-4">
+        <ul class="w-full flex gap-8 items-center justify-center">
+          <li class="font-bold hover:text-yellow-400">
+            <a href="#">Informasi Bahan Ajar</a>
+          </li>
+          <li class="font-bold hover:text-yellow-400">
+            <a href="tracking.html">Tracking Pengiriman</a>
+          </li>
+
+          <!-- dropdown start -->
+          <li class="dropdown font-bold hover:text-yellow-400">
+            <div class="items-center gap-2 flex cursor-pointer">
+              <a href="#">Laporan</a>
+              <span class="material-symbols-outlined"> arrow_drop_down </span>
+            </div>
+            <div
+              class="dropdown-menu absolute flex-col shadow-lg gap-2 p-4 bg-white text-black rounded hidden"
+            >
+              <a href="#" class="hover:text-blue-400"
+                >Monitoring Progress DO Bahan Ajar</a
+              >
+              <a href="stok.html" class="hover:text-blue-400">Rekap Bahan Ajar</a>
+            </div>
+          </li>
+          <!-- dropdown end -->
+
+          <li class="font-bold hover:text-yellow-400">
+            <a href="#">Histori Transaksi Bahan Ajar</a>
+          </li>
+        </ul>
+      </nav>
+      <button
+        type="submit"
+        id="logoutBtn"
+        class="bg-yellow-400 py-3 px-5 rounded-4xl shadow-lg flex hover:bg-yellow-300 transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#000000"
+        >
+          <path
+            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"
+          />
+        </svg>
+        <h1>Logout</h1>
+      </button>
+    </header>
+    <!-- Header end -->
+
+    <!-- Main starts -->
+    <main class="pt-25">
+      <section class=" w-full mx-10 my-5 p-5 bg-white rounded-lg ">
+        <!-- Form Pencarian Start -->
+        <div class="w-125 m-auto bg-gray-100 p-10 rounded-lg shadow-lg">
+          <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-orange-500">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#F19E39"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+          </div>
+          <h1 class=" font-bold text-center text-4xl">Tracking Pengiriman</h1>
+
+          <p class="text-center py-3">
+            Fitur ini memungkinkan pengguna untuk melacak status pengiriman bahan
+            ajar secara real-time, memberikan informasi tentang lokasi dan perkiraan
+            waktu tiba.
+          </p>
+          <form class="w-full">
+            <div class="flex gap-2 mt-5">
+              <div class="flex  border rounded-2xl w-full items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#666666"><path d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-80 92L160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11Zm200-528 77-44-237-137-78 45 238 136Zm-160 93 78-45-237-137-78 45 237 137Z"/></svg>
+                <input type="text" id="inputDO" class="w-full py-3  focus:outline-none" name="tracking_number" placeholder="Masukkan Nomor D O, misal : xxx.xxx.xxx" />
+              </div>
+              
+              <button id="findBtn" type="button" class="bg-blue-500 text-white p-3 rounded-2xl hover:bg-blue-600">Lacak</button>
+            </div>
+          </form>
+        </div>
+        <!-- Form Pencarian End -->
+
+        <!-- Hasil Pencarian Start -->
+         <div id="trackingResult" class="max-w-3xl mx-auto"><!-- hasil dari pencarian bahan ajar akan dimuat dalam kotak div ini --></div>
+         
+<!-- Hasil Pencarian end -->
+    </section>
+        <script src="js/script.js"></script>
+        <script src="js/data.js"></script>
+
+  </body>
+</html>

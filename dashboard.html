@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/input.css" rel="stylesheet" />
+    <link href="src/output.css" rel="stylesheet" />
+    <!-- SweetAlert2 untuk Pop up -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_drop_down"
+    />
+
+    <title>SITTA</title>
+  </head>
+  <body>
+    <!-- Header starts -->
+    <header
+      class="bg-blue-500 w-full h-[10vh] border-b-4 border-yellow-400 flex items-center justify-between p-4 shadow-lg absolute top-0 left-0"
+    >
+      <img src="img/logoUt.jpg" alt="" class="w-17.5" />
+      <nav class="w-full p-4">
+        <ul class="w-full flex gap-8 items-center justify-center">
+          <li class="font-bold hover:text-yellow-400">
+            <a href="#">Informasi Bahan Ajar</a>
+          </li>
+          <li class="font-bold hover:text-yellow-400">
+            <a href="tracking.html">Tracking Pengiriman</a>
+          </li>
+
+          <!-- dropdown start -->
+          <li class="dropdown font-bold hover:text-yellow-400">
+            <div class="items-center gap-2 flex cursor-pointer">
+              <a href="#">Laporan</a>
+              <span class="material-symbols-outlined"> arrow_drop_down </span>
+            </div>
+            <div
+              class="dropdown-menu absolute flex-col shadow-lg gap-2 p-4 bg-white text-black rounded hidden"
+            >
+              <a href="#" class="hover:text-blue-400"
+                >Monitoring Progress DO Bahan Ajar</a
+              >
+              <a href="stok.html" class="hover:text-blue-400"
+                >Rekap Bahan Ajar</a
+              >
+            </div>
+          </li>
+          <!-- dropdown end -->
+
+          <li class="font-bold hover:text-yellow-400">
+            <a href="#">Histori Transaksi Bahan Ajar</a>
+          </li>
+        </ul>
+      </nav>
+      <button
+        type="submit"
+        id="logoutBtn"
+        class="bg-yellow-400 py-3 px-5 rounded-4xl shadow-lg flex hover:bg-yellow-300 transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="24px"
+          viewBox="0 -960 960 960"
+          width="24px"
+          fill="#000000"
+        >
+          <path
+            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z"
+          />
+        </svg>
+        <h1>Logout</h1>
+      </button>
+    </header>
+    <!-- Header end -->
+    <main class="w-full h-[90vh] bg-gray-100 py-20">
+      <div class="mx-10 my-5 p-5 bg-white rounded-lg shadow-lg m-auto">
+        <h1 class="text-3xl font-bold">Dashboard Aplikasi SITTA</h1>
+        <h2 id="greeting" class="text-3xl font-bold text-blue-900 leading-snug">
+          <!-- Teks akan diisi oleh JavaScript -->
+        </h2>
+      </div>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
